@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área do Retângulo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="assets/imagens/seta_esquerda.png"></a>
+    </nav>
+
+    <h2>Calculadora de Área do Retângulo</h2>
+
+    <p>Para calcular a área do retângulo, basta calcular o produto entre a sua base e a sua altura, ou seja, a área é
+        dada pela fórmula A=b⋅h. Além da área, outra grandeza importante é o perímetro.
+
+    </p>
+
+    <form id="retanguloForm">
+        <label for="baseRetangulo">Base do Retângulo:</label>
+        <input type="number" id="baseRetangulo" required>
+
+        <br>
+
+        <label for="alturaRetangulo">Altura do Retângulo:</label>
+        <input type="number" id="alturaRetangulo" required>
+
+        <br>
+
+        <button type="button" onclick="calcularAreaRetangulo()">Calcular Área do Retângulo</button>
+    </form>
+
+    <p id="resultadoRetangulo"></p>
+
+    <script>
+        function calcularAreaRetangulo() {
+            
+            let baseRetangulo = document.getElementById("baseRetangulo").value;
+            let alturaRetangulo = document.getElementById("alturaRetangulo").value;
+
+            let areaRetangulo = baseRetangulo * alturaRetangulo;
+
+            document.getElementById("resultadoRetangulo").innerHTML = "A área do retângulo é: " + areaRetangulo;
+        }
+    </script>
+
+</body>
+
+</html>

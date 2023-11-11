@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área da Coroa</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="assets/imagens/seta_esquerda.png"></a>
+    </nav>
+
+
+    <h2>Calculadora de Área da Coroa</h2>
+
+    <p>A área da coroa do círculo pode ser calculada através da diferença entre as áreas totais, isto é, área do círculo
+        maior menos a área do círculo menor. Quando duas ou mais circunferências possuem o mesmo centro, são denominadas
+        concêntricas. Nesse caso elas podem ter raio de tamanhos diferentes.</p>
+
+    <form id="coroaForm">
+        <label for="raioExterno">Raio Externo:</label>
+        <input type="number" id="raioExterno" required>
+
+        <br>
+
+        <label for="raioInterno">Raio Interno:</label>
+        <input type="number" id="raioInterno" required>
+
+        <br>
+
+        <button type="button" onclick="calcularAreaCoroa()">Calcular Área da Coroa</button>
+    </form>
+
+    <p id="resultadoCoroa"></p>
+
+    <script>
+        function calcularAreaCoroa() {
+
+            let raioExterno = document.getElementById("raioExterno").value;
+            let raioInterno = document.getElementById("raioInterno").value;
+
+
+            let areaCoroa = Math.PI * (Math.pow(raioExterno, 2) - Math.pow(raioInterno, 2));
+
+
+            document.getElementById("resultadoCoroa").innerHTML = "A área da coroa é: " + areaCoroa.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>

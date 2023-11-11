@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área do Quadrado</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="assets/imagens/seta_esquerda.png"></a>
+    </nav>
+
+    <h2>Calculadora de Área do Quadrado</h2>
+
+    <p>Multiplicamos o comprimento da sua base pela sua altura. Como, no quadrado, a base e a altura possuem a mesma
+        medida, a área do quadrado pode ser calculada pelo quadrado do lado.</p>
+
+    <form id="quadradoForm">
+        <label for="ladoQuadrado">Lado do Quadrado:</label>
+        <input type="number" id="ladoQuadrado" required>
+
+        <br>
+
+        <button type="button" onclick="calcularAreaQuadrado()">Calcular Área do Quadrado</button>
+    </form>
+
+    <p id="resultadoQuadrado"></p>
+
+    <script>
+        function calcularAreaQuadrado() {
+            
+            let ladoQuadrado = document.getElementById("ladoQuadrado").value;
+
+            
+            let areaQuadrado = Math.pow(ladoQuadrado, 2);
+
+            
+            document.getElementById("resultadoQuadrado").innerHTML = "A área do quadrado é: " + areaQuadrado;
+        }
+    </script>
+
+</body>
+
+</html>

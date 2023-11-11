@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área de Triângulo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="assets/imagens/seta_esquerda.png"></a>
+    </nav>
+
+    <h2>Calculadora de Área de Triângulo</h2>
+
+    <p>Área do triângulo é igual à metade do produto entre a sua base e a sua altura. Existem, ainda, outras formas de
+        se calcular a área de um triângulo. A área do triângulo é igual à medida da sua superfície.</p>
+
+    <form id="trianguloForm">
+        <label for="base">Base:</label>
+        <input type="number" id="base" required>
+
+        <br>
+
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" required>
+
+        <br>
+
+        <button type="button" onclick="calcularArea()">Calcular Área</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularArea() {
+
+            let base = document.getElementById("base").value;
+            let altura = document.getElementById("altura").value;
+
+
+            let area = (base * altura) / 2;
+
+
+            document.getElementById("resultado").innerHTML = "A área do triângulo é: " + area;
+        }
+    </script>
+
+</body>
+
+</html>

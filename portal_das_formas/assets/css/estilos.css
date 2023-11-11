@@ -1,0 +1,79 @@
+body {
+  background-image: linear-gradient(#fbfbf5 75px,
+      #686673);
+
+  margin: 50px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+}
+
+
+.circulo {
+  width: 150px;
+  height: 150px;
+  background-color: #ffffffaf;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.quadrado {
+  width: 150px;
+  height: 150px;
+  background-color: #FA741C;
+  display: inline-block;
+  margin: 10px;
+}
+
+.triangulo {
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 130px solid;
+  display: inline-block;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #6F7302;
+}
+
+h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 0 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff24;
+  color: #6F7302;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3;
+}
+
+.button:hover {
+  background-color: #000000;
+}

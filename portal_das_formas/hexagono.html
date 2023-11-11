@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área do Hexágono</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="assets/imagens/seta_esquerda.png"></a>
+    </nav>
+
+    <h2>Calculadora de Área do Hexágono</h2>
+
+    <p>Um hexágono é um polígono regular de 6 lados. Podemos dividir esse polígono em 6 triângulos idênticos. Assim,
+        para determinar a área desse hexágono, basta determinar a área de um dos triângulos e, em seguida, multiplicar o
+        resultado por 6.</p>
+
+    <form id="hexagonForm">
+        <label for="ladoHexagono">Lado do Hexágono:</label>
+        <input type="number" id="ladoHexagono" required>
+
+        <br>
+
+        <button type="button" onclick="calcularAreaHexagono()">Calcular Área do Hexágono</button>
+    </form>
+
+    <p id="resultadoHexagono"></p>
+
+    <script>
+        function calcularAreaHexagono() {
+            let ladoHexagono = document.getElementById("ladoHexagono").value;
+            let areaHexagono = (3 * Math.sqrt(3) * Math.pow(ladoHexagono, 2)) / 2;
+
+            
+            document.getElementById("resultadoHexagono").innerHTML = "A área do hexágono é: " + areaHexagono.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>
